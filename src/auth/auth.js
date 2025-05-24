@@ -17,7 +17,7 @@ passport.use(new LocalStrategy({ usernameField: 'email' }, async(email, password
         return callback(null, false)
     }
 
-    const saltBuffer = user.salt.saltBuffer
+    const saltBuffer = user.salt.buffer
 
     crypto.pbkdf2(password, saltBuffer, 310000, 16, 'sha256', (err, hashedPassword) => {
         if(err) {
@@ -93,6 +93,42 @@ authRouter.post('/signup', async (req, res) => {
             })
         }
     })
+})
+
+authRouter.post('/login', (req, res) => {
+    passport.authenticate('local', (error, user) => {
+        if(error) {
+            return res.status(500).send({
+                success: false,
+                statusCode: 500,
+                body: {
+                    text: "Erro durante a autenticação!",
+                    error
+                }
+            })
+        }
+
+        if(!user) {
+            return res.status(400).send({
+                success: false,
+                statusCode: 400,
+                body: {
+                    text: "Usuário não encontrado!"
+                }
+            })
+        }
+
+        const token = jwt.sign(user, 'secret')
+        return res.status(400).send({
+            success: true,
+            statusCode: 200,
+            body: {
+                text: "Usuário logado com sucesso!",
+                user,
+                token
+            }
+        })
+    })(req, res)
 })
 
 export default authRouter
