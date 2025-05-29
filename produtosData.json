@@ -1,0 +1,52 @@
+[
+    {
+        "nome": "Luvas de Procedimento",
+        "unidade_medida": "caixa",
+        "preco_unitario": 45.90
+    },
+    {
+        "nome": "Máscara Cirúrgica Tripla",
+        "unidade_medida": "caixa",
+        "preco_unitario": 32.50
+    },
+    {
+        "nome": "Gaze Estéril",
+        "unidade_medida": "pacote",
+        "preco_unitario": 38.70
+    },
+    {
+        "nome": "Sugador Descartável",
+        "unidade_medida": "pacote",
+        "preco_unitario": 14.20
+    },
+    {
+        "nome": "Espátula Clínica",
+        "unidade_medida": "unidade",
+        "preco_unitario": 25.00
+    },
+    {
+        "nome": "Fio de Sutura Nylon 4-0",
+        "unidade_medida": "caixa",
+        "preco_unitario": 98.00
+    },
+    {
+        "nome": "Anestésico Lidocaína 2%",
+        "unidade_medida": "caixa",
+        "preco_unitario": 120.50
+    },
+    {
+        "nome": "Bicarbonato para Profilaxia",
+        "unidade_medida": "frasco",
+        "preco_unitario": 35.90
+    },
+    {
+        "nome": "Pasta Profilática",
+        "unidade_medida": "pote",
+        "preco_unitario": 22.40
+    },
+    {
+        "nome": "Filme Radiográfico Dental",
+        "unidade_medida": "caixa",
+        "preco_unitario": 210.00
+    }
+]
