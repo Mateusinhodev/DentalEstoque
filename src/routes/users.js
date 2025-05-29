@@ -18,4 +18,11 @@ usersRouter.delete('/:id', async (req, res) => {
     res.status(statusCode).send({ success, statusCode, body })
 })
 
+usersRouter.put('/:id', async (req, res) => {
+    // console.log(req.params)
+    const { success, statusCode, body } = await usersControllers.updateUser(req.params.id, req.body)
+
+    res.status(statusCode).send({ success, statusCode, body })
+})
+
 export default usersRouter

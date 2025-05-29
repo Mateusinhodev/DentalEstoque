@@ -22,7 +22,36 @@ export default class UsersDataAccess {
         return result
     }
 
-    async updateUser() {
+    async updateUser(userId, userData) {
+        if(userData.password) {
+            const salt = crypto.randomBytes(16)
 
+            crypto.pbkdf2(userData.password, salt, 310000, 16, 'sha256', async (err, hashedPassword) => {
+                if(err) {
+                    throw new Error('Erro durante a criptografia da senha')
+                }
+        
+                userData = { ...userData, password: hashedPassword, salt }
+
+                const result = await Mongo.db
+                .collection(collectionName)
+                .findOneAndUpdate(
+                    { _id: new ObjectId(userId) },
+                    { $set: userData }
+                )
+
+                return result
+            })
+        } else {
+            const result = await Mongo.db
+            .collection(collectionName)
+            .findOneAndUpdate(
+                { _id: new ObjectId(userId) },
+                { $set: userData }
+            )
+
+            return result
+        }
+        
     }
 }
