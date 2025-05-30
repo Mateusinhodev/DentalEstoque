@@ -1,0 +1,52 @@
+[
+    {
+        "empresa": "OdontoPlus Distribuidora",
+        "telefone": "(11) 3221-4455",
+        "email": "contato@odontoplus.com.br"
+    },
+    {
+        "empresa": "Dental Prime Solutions",
+        "telefone": "(21) 4002-8922",
+        "email": "vendas@dentalprime.com"
+    },
+    {
+        "empresa": "OdontoMed Distribuidora",
+        "telefone": "(31) 3344-5566",
+        "email": "suporte@odontomed.com.br"
+    },
+    {
+        "empresa": "Dental Center Suprimentos",
+        "telefone": "(41) 99888-1122",
+        "email": "comercial@dentalcenter.com.br"
+    },
+    {
+        "empresa": "Sorriso Dental Supplies",
+        "telefone": "(51) 3777-8899",
+        "email": "atendimento@sorrisodental.com"
+    },
+    {
+        "empresa": "DentalPro Comércio",
+        "telefone": "(85) 3456-7788",
+        "email": "vendas@dentalpro.com.br"
+    },
+    {
+        "empresa": "OralTech Distribuidora",
+        "telefone": "(71) 3030-4040",
+        "email": "contato@oraltech.com"
+    },
+    {
+        "empresa": "MasterDental Equipamentos",
+        "telefone": "(62) 4009-5566",
+        "email": "suporte@masterdental.com.br"
+    },
+    {
+        "empresa": "OdontoCare Brasil",
+        "telefone": "(19) 99885-6644",
+        "email": "comercial@odontocare.com.br"
+    },
+    {
+        "empresa": "Dental Express Distribuidora",
+        "telefone": "(27) 3232-4455",
+        "email": "vendas@dentalexpress.com"
+    }
+]
