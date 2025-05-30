@@ -1,0 +1,42 @@
+[
+    {
+        "local": "Unidade de Saúde Bairro Centro",
+        "endereco": "Rua das Flores, 123 - Centro"
+    },
+    {
+        "local": "Unidade de Saúde Bairro Primavera",
+        "endereco": "Avenida Brasil, 456 - Bairro Primavera"
+    },
+    {
+        "local": "Unidade de Saúde Bairro São José",
+        "endereco": "Rua São José, 789 - Bairro São José"
+    },
+    {
+        "local": "Unidade de Saúde Bairro Bela Vista",
+        "endereco": "Rua Bela Vista, 321 - Bairro Bela Vista"
+    },
+    {
+        "local": "Unidade de Saúde Bairro Nova Esperança",
+        "endereco": "Avenida Esperança, 654 - Bairro Nova Esperança"
+    },
+    {
+        "local": "Unidade de Saúde Bairro Planalto",
+        "endereco": "Rua do Planalto, 987 - Bairro Planalto"
+    },
+    {
+        "local": "Unidade de Saúde Bairro Santa Luzia",
+        "endereco": "Travessa Santa Luzia, 159 - Bairro Santa Luzia"
+    },
+    {
+        "local": "Unidade de Saúde Bairro Industrial",
+        "endereco": "Avenida das Indústrias, 753 - Bairro Industrial"
+    },
+    {
+        "local": "Unidade de Saúde Bairro Alto da Serra",
+        "endereco": "Rua da Serra, 852 - Bairro Alto da Serra"
+    },
+    {
+        "local": "Unidade de Saúde Bairro Vila Nova",
+        "endereco": "Rua Vila Nova, 951 - Bairro Vila Nova"
+    }
+]

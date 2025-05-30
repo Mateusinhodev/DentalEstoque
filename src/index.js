@@ -6,6 +6,7 @@ import authRouter from './auth/auth.js'
 import usersRouter from './routes/users.js'
 import produtosRouter from './routes/produtos.js'
 import fornecedoresRouter from './routes/fornecedores.js'
+import locaisRouter from './routes/locais.js'
 
 config()
 
@@ -34,6 +35,7 @@ async function main() {
     app.use('/users', usersRouter)
     app.use('/produtos', produtosRouter)
     app.use('/fornecedores', fornecedoresRouter)
+    app.use('/locais', locaisRouter)
     
     app.listen(port, () => {
         console.log(`Server running on: http://${hostname}:${port}`)
