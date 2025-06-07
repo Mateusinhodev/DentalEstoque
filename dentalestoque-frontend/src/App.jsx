@@ -1,9 +1,10 @@
+import Sidebar from "./components/Sidebar/Sidebar";
 
 
 export default function App() {
 	return (
 		<div>
-			<h1>Dental Estoque</h1>
+			<Sidebar/>
 		</div>
 	)
 }
