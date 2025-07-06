@@ -1,11 +1,13 @@
-import Sidebar from "./components/Sidebar/Sidebar";
+import { BrowserRouter } from "react-router-dom"
+import RoutesApp from "./routes"
 
-
-export default function App() {
+function App() {
 	return (
-		<div>
-			<Sidebar/>
-		</div>
-	)
+		 <BrowserRouter>
+			<RoutesApp/>
+		</BrowserRouter>
+	);
 }
 
+
+export default App;
