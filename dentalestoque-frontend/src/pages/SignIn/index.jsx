@@ -3,11 +3,31 @@ import './signin.css'
 import { useState } from 'react'
 import logo from '../../assets/logo.png'
 import { Link } from 'react-router';
+import authServices from '../../services/auth';
 
 export default function SignIn() {
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [formData, setFormData] = useState(null);
+    const { login, authLoading } = authServices();
+
+    const handleFormDataChange = (e) => {        
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        })
+
+        // console.log(formData);
+    }
+
+    const handleSubmitForm = (e) => {
+        e.preventDefault()
+
+        login(formData);
+    }
+
+    if(authLoading) {
+        return ( <h1>Carregando...</h1> )
+    }
 
     return (
         <div className="container-center">
@@ -16,10 +36,22 @@ export default function SignIn() {
                     <img src={logo} alt="Logo do sistema" />
                 </div>
 
-                <form>
+                <form onSubmit={handleSubmitForm}>
                     <h1>Entrar</h1>
-                    <input type="text" placeholder='seuemail@email.com' value={email} onChange={(e) => setEmail(e.target.value)}/>
-                    <input type="password" placeholder='*******' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                    <input 
+                        type="email" 
+                        placeholder='seuemail@email.com' 
+                        name='email'
+                        onChange={handleFormDataChange}
+                        required
+                    />
+                    <input 
+                        type="password" 
+                        placeholder='Senha' 
+                        name='password' 
+                        onChange={handleFormDataChange}
+                        required
+                    />
                     
                     <button type='submit'>Acessar</button>
                 </form>
