@@ -29,9 +29,9 @@ export default function SignUp() {
         // console.log(formData);
     }
 
-    if(authLoading) {
-        return ( <h1>Carregando...</h1> )
-    }
+    // if(authLoading) {
+    //     return ( <h1>Carregando...</h1> )
+    // }
 
     return (
         <div className="container-center">
@@ -71,7 +71,9 @@ export default function SignUp() {
                         required
                     />
                     
-                    <button type='submit'>Cadastrar</button>
+                    <button type='submit'>
+                        {authLoading ? 'Carregando...' : 'Cadastrar'}
+                    </button>
                 </form>
 
                 <Link to='/'>Já possui conta? Faça login</Link>

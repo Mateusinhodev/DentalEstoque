@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router';
+
 
 export default function authServices() {
 
     const [authLoading, setAuthLoading] = useState(false);
+    
+    const navigate = useNavigate();
 
     const url = 'http://localhost:3000/auth';
 
@@ -26,6 +30,7 @@ export default function authServices() {
         })
         .finally(() => {
             setAuthLoading(false)
+            navigate("/dashboard")
         })
     }
 
@@ -56,6 +61,7 @@ export default function authServices() {
         })
         .finally(() => {
             setAuthLoading(false)
+            navigate("/dashboard")
         })
     }
 

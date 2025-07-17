@@ -25,9 +25,9 @@ export default function SignIn() {
         login(formData);
     }
 
-    if(authLoading) {
-        return ( <h1>Carregando...</h1> )
-    }
+    // if(authLoading) {
+    //     return ( <h1>Carregando...</h1> )
+    // }
 
     return (
         <div className="container-center">
@@ -53,7 +53,9 @@ export default function SignIn() {
                         required
                     />
                     
-                    <button type='submit'>Acessar</button>
+                    <button type='submit'>
+                        {authLoading ? 'Carregando' : "Acessar"}
+                    </button>
                 </form>
 
                 <Link to='/cadastro'>Criar uma conta</Link>
