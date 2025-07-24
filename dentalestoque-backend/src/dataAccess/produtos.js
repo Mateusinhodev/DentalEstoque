@@ -1,32 +1,32 @@
 import { Mongo } from "../database/mongo.js";
 import { ObjectId } from "mongodb";
 
-const collectionName = 'produtos'
+const collectionName = 'produtos';
 
 export default class ProdutosDataAccess {
     async getProdutos() {
         const result = await Mongo.db 
         .collection(collectionName)
         .find({ })
-        .toArray()
+        .toArray();
 
-        return result
+        return result;
     }
 
     async addProduto(produtoData) {
         const result = await Mongo.db 
         .collection(collectionName)
-        .insertOne(produtoData)
+        .insertOne(produtoData);
 
-        return result
+        return result;
     }
 
     async deleteProduto(produtoId) {
         const result = await Mongo.db
         .collection(collectionName)
-        .findOneAndDelete({ _id: new ObjectId(produtoId) })
+        .findOneAndDelete({ _id: new ObjectId(produtoId) });
 
-        return result
+        return result;
     }
 
     async updateProduto(produtoId, produtoData) {
@@ -36,9 +36,9 @@ export default class ProdutosDataAccess {
         .findOneAndUpdate(
             { _id: new ObjectId(produtoId) },
             { $set: produtoData }
-        )
+        );
 
-        return result
+        return result;
     }
         
 }

@@ -1,49 +1,49 @@
-import ProdutosDataAccess from '../dataAccess/produtos.js'
-import { ok, serverError } from '../helpers/httpResponse.js'
+import ProdutosDataAccess from '../dataAccess/produtos.js';
+import { ok, serverError } from '../helpers/httpResponse.js';
 
 export default class ProdutosControllers {
     constructor() {
-        this.dataAccess = new ProdutosDataAccess()
+        this.dataAccess = new ProdutosDataAccess();
     }
 
     async getProdutos() {
         try {
-            const produtos = await this.dataAccess.getProdutos()
+            const produtos = await this.dataAccess.getProdutos();
             // console.log(produtos)
 
-            return ok(produtos)
+            return ok(produtos);
         } catch (error) {
-            return serverError(error)
+            return serverError(error);
         }
     }
 
     async addProduto(produtoData) {
         try {
-            const result = await this.dataAccess.addProduto(produtoData)
+            const result = await this.dataAccess.addProduto(produtoData);
 
-            return ok(result)
+            return ok(result);
         } catch (error) {
-            return serverError(error)
+            return serverError(error);
         }
     }
 
     async deleteProduto(produtoId) {
         try {
-            const result = await this.dataAccess.deleteProduto(produtoId)
+            const result = await this.dataAccess.deleteProduto(produtoId);
 
-            return ok(result)
+            return ok(result);
         } catch (error) {
-            return serverError(error)
+            return serverError(error);
         }
     }
 
     async updateProduto(produtoId, produtoData) {
         try {
-            const result = await this.dataAccess.updateProduto(produtoId, produtoData)
+            const result = await this.dataAccess.updateProduto(produtoId, produtoData);
 
-            return ok(result)
+            return ok(result);
         } catch (error) {
-            return serverError(error)
+            return serverError(error);
         }
     }
 }

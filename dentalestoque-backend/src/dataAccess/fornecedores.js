@@ -1,32 +1,32 @@
 import { Mongo } from "../database/mongo.js";
 import { ObjectId } from "mongodb";
 
-const collectionName = 'fornecedores'
+const collectionName = 'fornecedores';
 
 export default class FornecedoresDataAccess {
     async getFornecedores() {
         const result = await Mongo.db 
         .collection(collectionName)
         .find({ })
-        .toArray()
+        .toArray();
 
-        return result
+        return result;
     }
 
     async addFornecedor(fornecedorData) {
         const result = await Mongo.db 
         .collection(collectionName)
-        .insertOne(fornecedorData)
+        .insertOne(fornecedorData);
 
-        return result
+        return result;
     }
 
     async deleteFornecedor(fornecedorId) {
         const result = await Mongo.db
         .collection(collectionName)
-        .findOneAndDelete({ _id: new ObjectId(fornecedorId) })
+        .findOneAndDelete({ _id: new ObjectId(fornecedorId) });
 
-        return result
+        return result;
     }
 
     async updateFornecedor(fornecedorId, fornecedorData) {
@@ -36,9 +36,9 @@ export default class FornecedoresDataAccess {
         .findOneAndUpdate(
             { _id: new ObjectId(fornecedorId) },
             { $set: fornecedorData }
-        )
+        );
 
-        return result
+        return result;
     }
         
 }
