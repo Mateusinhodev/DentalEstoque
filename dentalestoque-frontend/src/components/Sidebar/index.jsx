@@ -1,3 +1,4 @@
+import { Link } from "react-router"
 import "./sidebar.css"
 
 const Sidebar = () => {
@@ -7,47 +8,40 @@ const Sidebar = () => {
             <h1>Dental <span> Estoque </span></h1>
         </div>
         <div className="nav-menu">
-            <div className="menu-heading">Main</div>
-            <div className="nav-item active">
+            <div className="menu-heading">GESTÃO</div>
+            <Link to="/dashboard" className="nav-item active">
                 <i class="fa-solid fa-chart-line"></i>
                 <span>Dashboard</span>
-            </div>
-            <div className="nav-item">
-                <i class="fa-solid fa-box"></i>
-                <span>Produtos</span>
-            </div>
-            <div className="nav-item">
+            </Link>
+            <Link to="/estoque" className="nav-item">
+                <i className="fas fa-chart-pie"></i>
+                <span>Controle de Estoque</span>
+            </Link>
+
+            <div className="menu-heading">MOVIMENTAÇÕES</div>
+            <Link to="/entradas" className="nav-item">
                 <i class="fa-solid fa-right-to-bracket"></i>
                 <span>Entradas</span>
-            </div>
-            <div className="nav-item">
+            </Link>
+            <Link to="/saidas" className="nav-item">
                 <i class="fa-solid fa-right-from-bracket"></i>
                 <span>Saidas</span>
-            </div>
-
-            <div className="menu-heading">Reports</div>
-            <div className="nav-item">
-                <i className="fas fa-chart-pie"></i>
-                <span>Analytics</span>
-            </div>
-            <div className="nav-item">
-                <i className="fas fa-chart-pie"></i>
-                <span>Sales</span>
-            </div>
+            </Link>
             
-            <div className="menu-heading">Admin</div>
-            <div className="nav-item">
-                <i class="fa-solid fa-gear"></i>
-                <span>Settings</span>
-            </div>
-            <div className="nav-item">
-                <i className="fas fa-chart-pie"></i>
-                <span>Notifications</span>
-            </div>
-            <div className="nav-item">
-                <i className="fas fa-chart-pie"></i>
-                <span>Security</span>
-            </div>
+            <div className="menu-heading">CADASTROS</div>
+            <Link to="/produtos" className="nav-item">
+                <i class="fa-solid fa-box"></i>
+                <span>Produtos</span>
+            </Link>
+            <Link to="/locais" className="nav-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Locais</span>
+            </Link>
+            <Link to="/fornecedores" className="nav-item">
+                <i class="fa-solid fa-truck"></i>
+                <span>Fornecedores</span>
+            </Link>
+            
         </div>
     </div>
   )

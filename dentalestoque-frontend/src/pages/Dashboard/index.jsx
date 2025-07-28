@@ -4,9 +4,8 @@ import "./dashboard.css"
 
 export default function Dashboard() {
     return (
-        <div className="container">
-            <Sidebar/>
-            <Header/>
+        <div>
+            <h1>Dashboard</h1>
         </div>
     )
 }

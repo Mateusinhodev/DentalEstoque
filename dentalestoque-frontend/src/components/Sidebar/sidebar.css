@@ -29,7 +29,7 @@
 .logo h1 {
     font-size: 26px;
     font-weight: 700;
-    color: white;
+    color: #FFF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,6 +69,8 @@
     border-radius: 0 6px 6px 0;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
+    color: #FFF;
 }
 
 .nav-item::after {
