@@ -1,7 +1,11 @@
+import Title from "../../components/Title"
+
 export default function Produtos() {
     return (
-        <div>
-            <h1>Produtos</h1>
+        <div className="main-content">
+            <div className="page-title">
+                <Title name={"Produtos"}/>
+            </div>
         </div>
     )
 }

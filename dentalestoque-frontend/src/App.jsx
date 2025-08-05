@@ -5,7 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
 	return (
-		<div className="container">
+		<div>
 			<BrowserRouter>
 				<RoutesApp/>
 			</BrowserRouter>

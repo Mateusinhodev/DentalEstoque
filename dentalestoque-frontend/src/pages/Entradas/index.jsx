@@ -1,7 +1,11 @@
+import Title from "../../components/Title"
+
 export default function Entradas() {
     return (
-        <div>
-            <h1>Entradas</h1>
+        <div className="main-content">
+            <div className="page-title">
+                <Title name={"Entradas"}/>
+            </div>
         </div>
     )
 }

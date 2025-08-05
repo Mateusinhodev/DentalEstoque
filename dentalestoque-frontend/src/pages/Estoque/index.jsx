@@ -1,7 +1,11 @@
+import Title from "../../components/Title"
+
 export default function Estoque() {
     return (
-        <div>
-            <h1>Estoque</h1>
+        <div className="main-content">
+            <div className="page-title">
+                <Title name={"Estoque"}/>
+            </div>
         </div>
     )
 }

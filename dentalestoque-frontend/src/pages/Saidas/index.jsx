@@ -1,7 +1,11 @@
+import Title from "../../components/Title"
+
 export default function Saidas() {
     return (
-        <div>
-            <h1>Saídas</h1>
+        <div className="main-content">
+            <div className="page-title">
+                <Title name={"Saidas"}/>
+            </div>
         </div>
     )
 }

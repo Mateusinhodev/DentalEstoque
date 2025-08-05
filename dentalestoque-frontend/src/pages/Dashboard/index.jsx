@@ -1,11 +1,12 @@
-import Header from "../../components/Header"
-import Sidebar from "../../components/Sidebar"
+import Title from "../../components/Title"
 import "./dashboard.css"
 
 export default function Dashboard() {
     return (
-        <div>
-            <h1>Dashboard</h1>
+        <div className="main-content">
+            <div className="page-title">
+                <Title name={"Dashboard"}/>
+            </div>
         </div>
     )
 }
