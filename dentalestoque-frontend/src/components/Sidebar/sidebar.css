@@ -38,7 +38,7 @@
 
 .logo span {
     color: var(--primary-light);
-    background-color: linear-gradient(45deg, var(--primary-light), var(--success));
+    background: linear-gradient(45deg, var(--primary-light), var(--success));
     -webkit-background-clip: text;
     background-clip: text;
     /* -webkit-text-fill-color: transparent; */
